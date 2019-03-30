@@ -127,7 +127,10 @@
  
 </div>
         <div class="row">
-  <div class="column" style="background-color:#000033;margin: 0px 0 0 0px; width: 1374px;height: 38px;">
+  <div class="column" style="background-color:#000033;background-color: #000033;
+    margin: 0px 0 0 0px;
+    width: 1385px;
+    height: 40px;">
        <div class="dropdown">
   <button class="dropbtn"><i class="fa fa-home" style="font-size:35px; color:white; padding: 0 18px 0 0; margin: -13px 0 0 10px;"></i></button>
    <a href= "Election_Home_Page.apx" >Home</a>
@@ -163,7 +166,7 @@
   </div>
 </div>
        <div class="dropdown">
-  <button class="dropbtn" style="margin: 0 0 0 60px;"><a>Contact Us</a><i class="fa fa-phone" style="font-size:25px; color:white; padding: 0 18px 0 0; margin: -13px 0 0 10px;"></i></button>
+  <button class="dropbtn" style="margin: 0 0 0 60px;">Contact Us<i class="fa fa-phone" style="font-size:25px; color:white; padding: 0 18px 0 0; margin: -13px 0 0 10px;"></i></button>
   <div class="dropdown-content">
   </div>
 </div> 

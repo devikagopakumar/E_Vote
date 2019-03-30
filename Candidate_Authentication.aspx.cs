@@ -22,7 +22,7 @@ public partial class Candidate_Authentication : System.Web.UI.Page
 
     protected void Ok_Click(object sender, EventArgs e)
     {
-        string s11 = "select username,password,s_id,election_label,category from Candidate_details";
+        string s11 = "select username,password,s_id,election_label,category from Candidate_detail";
         SqlDataReader dr;
         dr = db.select(s11);
         while (dr.Read())

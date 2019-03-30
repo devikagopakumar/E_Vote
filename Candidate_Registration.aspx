@@ -44,6 +44,13 @@
             height: 26px;
             width: 1px;
         }
+        .auto-style23 {
+            height: 146px;
+        }
+        .auto-style24 {
+            width: 318px;
+            height: 146px;
+        }
     </style>
 </asp:Content>
 
@@ -65,13 +72,20 @@
                </td>
            </tr>
            <tr>
-               <td>
+               <td class="auto-style23">
                    <asp:Image ID="Image3" runat="server" CssClass="auto-style17" ImageUrl="~/PIC/candidate_registration.jpg" />
                </td>
-               <td class="auto-style15">&nbsp;&nbsp;&nbsp;&nbsp;
+               <td class="auto-style24">&nbsp;&nbsp;&nbsp;&nbsp;
                    <br />
                    <asp:Image ID="photo" runat="server" CssClass="auto-style5" />
                </td>
+           </tr>
+           <tr>
+               <td class="auto-style11">
+                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                   &nbsp;&nbsp; &nbsp;</td>
+               <td class="auto-style16">
+                   &nbsp;</td>
            </tr>
            <tr>
                <td class="auto-style3" style="width: 1px; padding: 0 0 0 138px;">
@@ -186,10 +200,9 @@
            </tr>
            <tr>
                <td class="auto-style21" style="padding: 0 0 0 138px;">
-                   </td>
+                   &nbsp;</td>
                <td class="auto-style16">
-                   <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
-               </td>
+                   &nbsp;</td>
            </tr>
            <tr>
                <td class="auto-style11" style="width: 1px; padding: 0 0 0 138px;">

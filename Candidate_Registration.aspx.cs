@@ -12,21 +12,25 @@ public partial class Default2 : System.Web.UI.Page
     SqlConnection con;
     protected void Page_Load(object sender, EventArgs e)
     {
+        
         ValidationSettings.UnobtrusiveValidationMode = UnobtrusiveValidationMode.None;
         db = new Student();
         con = new SqlConnection("Data Source=DESKTOP-MOG89QK; Initial Catalog=E_vote; Integrated Security=SSPI");
         con.Open();
         date_and_time.Text = DateTime.Now.ToString();
-        string s11 = "select election_id from Candidate_details ";
-        SqlDataReader dr;
-        dr = db.select(s11);
-        while (dr.Read())
-        {
-            TextBox1.Text = dr.GetValue(0).ToString();
-        }
-        dr.Close();
-    }
+       /* string s11 = "select Max(election_id) from Candidate_detail";
+            SqlDataReader dr;
+            dr = db.select(s11);
+            while (dr.Read())
+            {
+               
+                eid.Text = dr.GetValue(0).ToString();
 
+            }
+
+            dr.Close();*/
+        }
+    
     
     protected void Clickhere_Click(object sender, EventArgs e)
     {
@@ -57,12 +61,9 @@ public partial class Default2 : System.Web.UI.Page
            
         }
 
-
         dr.Close();
 
     }
-
-    
 
     protected void Cancel_Click(object sender, EventArgs e)
     {
@@ -84,17 +85,65 @@ public partial class Default2 : System.Web.UI.Page
 
     protected void Submit_Click(object sender, EventArgs e)
     {
-        string c;
-        if (CheckBox1.Checked == true && category.Text != "" && username.Text != "" && password.Text != "")
+
+        string c,sid1;
+        int f = 0;
+        string s11 = "select s_id,status from  Candidate_detail where s_id='" + sid.Text + "'";
+        SqlDataReader dr;
+        dr = db.select(s11);
+        while (dr.Read())
         {
-            c = "Y";
-            string s = "insert into Candidate_details values('" + sid.Text + "','" + Label2.Text + "','" + category.Text + "','" + username.Text + "','" + password.Text + "','" + date_and_time.Text + "','" + c + "')";
-            db.insert(s);
-            Response.Write("<script> alert('Successfully Registersd...') </script>");
+            if (dr.GetValue(0).ToString() == sid.Text && dr.GetValue(1).ToString() == "Y")
+            {
+                f = 1;
+            }
+        }
+        dr.Close();
+        if (f == 1)
+        {
+            sid1 = sid.Text;
+            Session["sid1"] = sid1;
+            Response.Redirect("Already_Registered.aspx");
+        }
+        else if (CheckBox1.Checked == false || category.Text == "" || username.Text == "" || password.Text == "")
+        {
+
+            Response.Write("<script> alert('Enter All The Field...') </script>");
         }
         else
         {
-            Response.Write("<script> alert('Successfully Registersd...') </script>");
+            c = "Y";
+            string s = "insert into Candidate_detail values('" + sid.Text + "','" + Label2.Text + "','" + category.Text + "','" + username.Text + "','" + password.Text + "','" + date_and_time.Text + "','" + c + "')";
+            db.insert(s);
+            Response.Redirect("Candidate_Election_ID.aspx");
+
+
+           /* na = name.Text;
+            ad = address.Text;
+            ge = gender.Text;
+            ph = phno.Text;
+            em = emailid.Text;
+            co = course.Text;
+            br = branch.Text;
+            se = semester.Text;
+            dt = date_and_time.Text;
+            ca = category.Text;
+            si = sid.Text;
+
+            Session["b"] = na;
+            Session["c"] = ad;
+            Session["d"] = ge;
+            Session["e1"] = ph;
+            Session["f"] = em;
+            Session["g"] = co;
+            Session["h"] = br;
+            Session["i"] = se;
+            Session["j"] = dt;
+            Session["k"] = ca;
+            Session["l"] = si;*/
+
         }
+           
+        
     }
 }

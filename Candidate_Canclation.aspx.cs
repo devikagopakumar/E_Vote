@@ -30,7 +30,7 @@ public partial class Candidate_Canclation : System.Web.UI.Page
     {
         string c;
         c = "N";
-        string s12= "update Candidate_details set status = '"+c+"' where s_id='"+sid.Text+"'";
+        string s12= "update Candidate_detail set status = '"+c+"' where s_id='"+sid.Text+"'";
         db.update(s12);
         Response.Write("<script> alert('Nomination Is Cancelled') </script>");
     }
