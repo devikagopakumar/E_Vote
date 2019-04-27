@@ -88,11 +88,16 @@ public partial class Default2 : System.Web.UI.Page
             }
         }
         dr.Close();
-        if (f == 1)
+      
+       if (f == 1)
         {
             sid1 = sid.Text;
             Session["sid1"] = sid1;
             Response.Redirect("Already_Registered.aspx");
+        }
+       else if (sid.Text == "")
+        {
+            Response.Write("<script> alert('First Enter Your Student ID') </script>");
         }
         else if (CheckBox1.Checked == false || category.Text == "" || username.Text == "" || password.Text == "")
         {
@@ -102,7 +107,7 @@ public partial class Default2 : System.Web.UI.Page
         else
         {
             c = "Y";
-            string s = "insert into Candidate_detail values('" + sid.Text + "','" + Label2.Text + "','" + category.Text + "','" + username.Text + "','" + password.Text + "','" + date_and_time.Text + "','" + c + "')";
+            string s = "insert into Candidate_detail(s_id,election_label,category,username,password,date_time,status) values('" + sid.Text + "','" + Label2.Text + "','" + category.Text + "','" + username.Text + "','" + password.Text + "','" + date_and_time.Text + "','" + c + "')";
             db.insert(s);
             Response.Redirect("Candidate_Election_ID.aspx");
 

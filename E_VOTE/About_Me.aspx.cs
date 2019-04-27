@@ -39,6 +39,6 @@ public partial class About_Me : System.Web.UI.Page
 
     protected void Button1_Click(object sender, EventArgs e)
     {
-        Response.Redirect("Election_Home_Page.aspx");
+        Response.Redirect("Nomination_List.aspx");
     }
 }

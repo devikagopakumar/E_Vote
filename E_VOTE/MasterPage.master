@@ -143,13 +143,14 @@
   <a href="Candidate_Registration.aspx">Candidate Registration</a>
   <a href="Candidate_Authentication.aspx">Nomination Cancellation</a>
   <a href="Nomination_List.aspx">Nomination List</a>
+  <a href="Current_Status.aspx">Current Status</a>
   </div>
 </div>
   <div class="dropdown">
   <button class="dropbtn" style="margin: 0 0 0 80px;">Voting</button>
   <div class="dropdown-content">
   <a href="Student_Authentication.aspx">Student Authentication</a>
-  <a href="#">Student Voting</a>
+  <a href="Voting.aspx">Student Voting</a>
   
   </div>
 </div>

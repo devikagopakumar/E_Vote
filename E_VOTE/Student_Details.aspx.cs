@@ -17,8 +17,8 @@ public partial class Student_Details : System.Web.UI.Page
         con = new SqlConnection("Data Source=DESKTOP-MOG89QK; Initial Catalog=E_vote;Integrated Security=SSPI");
         con.Open();
         date_and_time.Text = DateTime.Now.ToString();
-       sid.Text = Session["sid"].ToString();
-       name.Text = Session["name"].ToString();
+        sid.Text = Session["sid"].ToString();
+        name.Text = Session["name"].ToString();
         course.Text = Session["course"].ToString();
         branch.Text = Session["branch"].ToString();
         semester.Text = Session["semester"].ToString();
@@ -26,7 +26,30 @@ public partial class Student_Details : System.Web.UI.Page
 
     protected void Next_Click(object sender, EventArgs e)
     {
-
+       /*  int count = 1;
+          int f = 0;
+          string s11 = "select s_id from Voting_Details where s_id='"+sid.Text+"'";
+          SqlDataReader dr;
+          dr = db.select(s11);
+          while(dr.Read())
+          {
+              if(sid.Text==dr.GetValue(0).ToString())
+              {
+                  f = 1; ;
+              }
+          }
+          dr.Close();
+          if (f == 1)
+          {
+              Response.Write("<script> alert('Existed') </script>");
+          }
+          else
+          {
+              string s = "insert into Voting_Details (s_id,count) values ('" + sid.Text + "','" + count + "')";
+              db.insert(s);
+              Response.Redirect("Voting.aspx");
+          }*/
+       Response.Redirect("Voting.aspx");
     }
 
     protected void Back_Click(object sender, EventArgs e)

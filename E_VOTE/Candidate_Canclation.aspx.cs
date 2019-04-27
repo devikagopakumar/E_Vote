@@ -32,6 +32,8 @@ public partial class Candidate_Canclation : System.Web.UI.Page
         c = "N";
         string s12= "update Candidate_detail set status = '"+c+"' where s_id='"+sid.Text+"'";
         db.update(s12);
-        Response.Write("<script> alert('Nomination Is Cancelled') </script>");
+        //  Response.Write("<script> alert('Nomination Is Cancelled') </script>");
+        Response.Redirect("Candidate_Canceld_Showing_Page.aspx");
+        Yes.Enabled = false;
     }
 }
