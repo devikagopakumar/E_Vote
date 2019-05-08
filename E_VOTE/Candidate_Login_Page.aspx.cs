@@ -16,21 +16,15 @@ public partial class Candidate_Login_Page : System.Web.UI.Page
         con = new SqlConnection("Data Source=DESKTOP-MOG89QK; Initial Catalog=E_vote;Integrated Security=SSPI");
         con.Open();
     }
-
-  
-
     protected void Next_Click(object sender, EventArgs e)
     {
-        string s11 = "select username,password,s_id,election_label,category from Candidate_detail where status='Y'";
+        string s11 = "select username,password from Candidate_detail ";
         SqlDataReader dr;
         dr = db.select(s11);
         while (dr.Read())
         {
             if (username.Text == dr.GetValue(0).ToString() && password.Text == dr.GetValue(1).ToString())
             {
-                Session["s_id"] = dr.GetString(2);
-                Session["election_label"] = dr.GetString(3);
-                Session["category"] = dr.GetString(4);
                 Response.Redirect("Candidate_Canclation.aspx");
             }
         }
@@ -48,6 +42,6 @@ public partial class Candidate_Login_Page : System.Web.UI.Page
 
     protected void Back_Click(object sender, EventArgs e)
     {
-        Response.Redirect("Election_Home_Page.aspx");
+        Response.Redirect("For_Login.aspx");
     }
 }

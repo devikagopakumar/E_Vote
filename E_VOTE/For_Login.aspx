@@ -46,7 +46,7 @@ img {
   <div class="container">
    <h5><b>TO CREATE USERNAME AND PASSWORD FOR VOTE</b></h5>
       <p>
-          <asp:HyperLink ID="HyperLink1" runat="server" Font-Bold="False" Font-Underline="True" ForeColor="Blue" NavigateUrl="~/Candidate_Login_Page.aspx">Click Here</asp:HyperLink>
+          <asp:HyperLink ID="HyperLink1" runat="server" Font-Bold="False" Font-Underline="True" ForeColor="Blue" NavigateUrl="~/Student_Vote_Login_Creation.aspx">Click Here</asp:HyperLink>
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           <asp:HyperLink ID="HyperLink4" runat="server" Font-Bold="False" Font-Underline="True" ForeColor="Red" NavigateUrl="~/Election_Home_Page.aspx">Back</asp:HyperLink>
       &nbsp;&nbsp;&nbsp;&nbsp;

@@ -13,6 +13,7 @@ public partial class Voting : System.Web.UI.Page
     SqlConnection con;
     protected void Page_Load(object sender, EventArgs e)
     {
+        date_and_time.Text= DateTime.Now.ToString();
         sid.Text = Session["sid"].ToString();
         db = new Student();
         con = new SqlConnection("Data Source=DESKTOP-MOG89QK; Initial Catalog=E_vote; Integrated Security=SSPI");
@@ -20,7 +21,8 @@ public partial class Voting : System.Web.UI.Page
     }
     protected void Chairman_Click(object sender, EventArgs e)
     {
-      
+
+        GridView1.Enabled = true;
         for1.Text="For";
         category1.Text = "Chairman";
         string s11 = "select s.name,s.course,c.election_id from Student_details s,Candidate_detail c where s.s_id=c.s_id and c.category='Chairman' and status='Y'";
@@ -28,14 +30,12 @@ public partial class Voting : System.Web.UI.Page
         DataSet ds = new DataSet();
         GridView1.DataSource = dr;
         GridView1.DataBind();
-       
-       
-      
+        
     }
 
     protected void Chairperson_Click(object sender, EventArgs e)
     {
-       
+        GridView1.Enabled = true;
         for1.Text = "For";
         category1.Text = "Chairperson";
         string s11 = "select s.name,s.course,c.election_id from Student_details s,Candidate_detail c where s.s_id=c.s_id and c.category='Chairperson' and status='Y'";
@@ -54,9 +54,10 @@ public partial class Voting : System.Web.UI.Page
       string sid1 = sid.Text;
       int count = 1;
      
-        string s = "insert into Voting_Details (s_id,count,category,election_id,election_label) values ('"+sid1+"','"+count+"','"+category+"','"+eid+"','"+label+"')";
+        string s = "insert into Voting_Details (s_id,count,category,election_id,election_label,date_time) values ('"+sid1+"','"+count+"','"+category+"','"+eid+"','"+label+"','"+date_and_time.Text+"')";
         db.insert(s);
         Response.Write("<script> alert('Voted') </script>");
-    
+        GridView1.Enabled = false;
+        
     }
 }

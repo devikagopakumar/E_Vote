@@ -49,7 +49,7 @@ public partial class Student_Details : System.Web.UI.Page
               db.insert(s);
               Response.Redirect("Voting.aspx");
           }*/
-       Response.Redirect("Voting.aspx");
+       Response.Redirect("Vote_Trail1.aspx");
     }
 
     protected void Back_Click(object sender, EventArgs e)

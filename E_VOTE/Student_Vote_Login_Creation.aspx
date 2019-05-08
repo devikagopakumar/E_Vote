@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="Candidate_Login_Page.aspx.cs" Inherits="Candidate_Login_Page" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="Student_Vote_Login_Creation.aspx.cs" Inherits="Student_Vote_Login_Creation" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
@@ -8,7 +8,7 @@
         <br />
     </p>
     <p>
-       <!DOCTYPE html>
+         <!DOCTYPE html>
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -17,7 +17,7 @@
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   transition: 0.3s;
   width:467px;
-  height:320px;
+  height:353px;
   border-radius: 5px;
   margin:0 0 0 395px;
   background-color:white;
@@ -36,7 +36,7 @@ img {
 }
 </style>
 </head>
-<body style="background-color:#e0ebeb">
+<body>
 
 
 
@@ -44,20 +44,25 @@ img {
   
   <div class="container">
     <h4>&nbsp;</h4>
-      <h4><b style="margin:0 0 0 141px">CANDIDATE LOGIN</b></h4>
-      <p>&nbsp;</p> 
+      <h4><b style="margin:0 0 0 100px">CREATE LOGIN FOR VOTE</b></h4>
+     <br />
+      <p>
+        <asp:Label ID="Label3" runat="server" Text="Student-ID" style="margin:0 0 0 63px"></asp:Label>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <asp:TextBox ID="sid" runat="server" style="margin:0 0 0 -15px"></asp:TextBox>
+      </p> 
     <p>
         <asp:Label ID="Label1" runat="server" Text="Username" style="margin:0 0 0 63px"></asp:Label>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
         <asp:TextBox ID="username" runat="server" style="margin:0 0 0 -13px"></asp:TextBox>
       </p>
       <p>
           <asp:Label ID="Label2" runat="server" Text="Password" style="margin:0 0 0 63px"></asp:Label>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
-          <asp:TextBox ID="password" type="password" runat="server" style="margin:0 0 0 -13px"></asp:TextBox>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
+          <asp:TextBox ID="password" type="password" runat="server" style="margin:0 0 0 -13px">
+</asp:TextBox>
       </p>
-      <p>
-          &nbsp;</p>
+      <br />
       <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           <asp:Button ID="Back" runat="server" Text="BACK" Width="137px" style="border-style: none; border-color: inherit; border-width: 0px; background-color:#009999; margin-left: 47px; margin-right: 0; margin-bottom: 0;" OnClick="Back_Click" />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -72,8 +77,7 @@ img {
 </div>
 
 </body>
-</html> 
-
+</html>
     </p>
     <p>
     </p>
@@ -81,6 +85,9 @@ img {
     </p>
     <p>
     </p>
-    </form>
+    <p>
+    </p>
+              </form>
 </asp:Content>
+
 

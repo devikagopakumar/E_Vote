@@ -85,9 +85,12 @@
                             &nbsp;
                             <asp:Label ID="category1" runat="server"  style="font-family:Lucida Calligraphy; font-size:50px"></asp:Label>
                             <br />
-                            <asp:Label ID="sid" runat="server" style="float:left;" Enabled="False"></asp:Label>
+                            <asp:Label ID="sid" runat="server" style="float:left; margin: 10px 0 0 0;" Enabled="False" Visible="False" ></asp:Label>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <asp:Label ID="Label3" runat="server" Font-Bold="True" Font-Size="X-Large" ForeColor="Red" Text="2K19"></asp:Label>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <asp:TextBox ID="date_and_time" runat="server" Width="152px" style="margin: 0 0 6px 232px;" Enabled="False"></asp:TextBox>
+&nbsp;&nbsp;&nbsp;&nbsp;
                         </td>
                     </tr>
                     <tr>
@@ -117,13 +120,11 @@
                     </tr>
                     <tr>
                         <td>
-                            <asp:Label ID="Label4" runat="server" Text="Label"></asp:Label>
-                        </td>
+                            &nbsp;</td>
                     </tr>
                     <tr>
                         <td>
-                            <asp:Label ID="Label5" runat="server" Text="Label"></asp:Label>
-                        </td>
+                            &nbsp;</td>
                     </tr>
                     <tr>
                         <td>&nbsp;</td>
