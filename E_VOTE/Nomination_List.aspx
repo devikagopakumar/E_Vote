@@ -28,7 +28,7 @@
         <tr>
             <td>
                
-                <asp:Button ID="Chairman" runat="server" Font-Bold="True"   OnClick="Button1_Click" Text="CHAIRMAN" Width="330px"  />
+                <asp:Button ID="Chairman" runat="server" Font-Bold="True"   OnClick="Button1_Click" Text="CHAIRMAN" Width="330px" style="margin:45px 0 0 0" />
                
             </td>
         </tr>
@@ -39,43 +39,41 @@
         </tr>
         <tr>
             <td >
-                <asp:Button ID="Button3" runat="server" Text="Button" Width="330px" />
+                <asp:Button ID="Vice_Chairman" runat="server" Font-Bold="True" Text="VICE CHAIRMAN" Width="330px" OnClick="Button3_Click" />
             </td>
         </tr>
         <tr>
             <td>
-                <asp:Button ID="Button4" runat="server" Text="Button" Width="330px" />
+                <asp:Button ID="Vice_Chairperson" runat="server" Text="VICE CHAIRPERSON" Font-Bold="True" Width="330px" OnClick="Vice_Chairperson_Click" />
             </td>
         </tr>
         <tr>
             <td>
-                <asp:Button ID="Button5" runat="server" Text="Button" Width="330px" />
+                <asp:Button ID="Arts_Secretary" runat="server" Text="ARTS SECRETARY" Font-Bold="True" Width="330px" OnClick="Arts_Secretary_Click" />
             </td>
         </tr>
         <tr>
             <td>
-                <asp:Button ID="Button6" runat="server" Text="Button" Width="330px" />
+                <asp:Button ID="Sports_Secretary" runat="server" Text="SPORTS SCRETARY" Font-Bold="True" Width="330px" OnClick="Sports_Secretary_Click" />
             </td>
         </tr>
         <tr>
             <td>
-                <asp:Button ID="Button7" runat="server" Text="Button" Width="330px" />
+                <asp:Button ID="Magazine_Editor" runat="server" Text="MAGAZINE EDITOR" Font-Bold="True" Width="330px" OnClick="Magazine_Editor_Click" />
             </td>
         </tr>
         <tr>
             <td>
-                <asp:Button ID="Button8" runat="server" Text="Button" Width="330px" />
+                <asp:Button ID="Back" runat="server" Text="BACK" Font-Bold="True" Width="330px" OnClick="Back_Click" BackColor="#3366FF" ForeColor="White" />
             </td>
         </tr>
         <tr>
             <td>
-                <asp:Button ID="Button9" runat="server" Text="Button" Width="330px"/>
-            </td>
+                &nbsp;</td>
         </tr>
         <tr>
             <td>
-                <asp:Button ID="Button10" runat="server" Text="Button" Width="330px" />
-            </td>
+                &nbsp;</td>
         </tr>
     </table>
      <table class="auto-style3">
@@ -96,6 +94,9 @@
                             <asp:BoundField DataField="name" HeaderText="Name" />
                             <asp:BoundField DataField="course" HeaderText="Course" />
                             <asp:BoundField DataField="election_id" HeaderText="Election-ID" />
+                            <asp:ImageField DataImageUrlField="image" HeaderText="Image">
+                                <ControlStyle Height="70px" Width="90px" />
+                            </asp:ImageField>
                         </Columns>
                         <FooterStyle BackColor="#CCCCCC" />
                         <HeaderStyle BackColor="Black" Font-Bold="True" ForeColor="White" />

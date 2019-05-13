@@ -16,7 +16,7 @@ public partial class About_Me : System.Web.UI.Page
         con = new SqlConnection("Data Source=DESKTOP-MOG89QK; Initial Catalog=E_vote; Integrated Security=SSPI");
         con.Open();
         eid.Text = Session["eid"].ToString();
-        string s11 = "select s.name ,c.election_id,s.course,s.branch,s.semester,s.email,s.y_addmission,c.category from Student_details s,Candidate_detail c where s.s_id=c.s_id and c.election_id='" + eid.Text + "'";
+        string s11 = "select s.name ,c.election_id,s.course,s.branch,s.semester,s.email,s.y_addmission,c.category,c.image from Student_details s,Candidate_detail c where s.s_id=c.s_id and c.election_id='" + eid.Text + "'";
         SqlDataReader dr;
         dr = db.select(s11);
         while (dr.Read())
@@ -30,6 +30,7 @@ public partial class About_Me : System.Web.UI.Page
             mid.Text = dr.GetValue(5).ToString();
             addmission.Text = dr.GetValue(6).ToString();
             category.Text = dr.GetValue(7).ToString();
+            Image1.ImageUrl = dr.GetValue(8).ToString();
         
         }
 

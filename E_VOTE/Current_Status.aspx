@@ -7,6 +7,9 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <form id="form1" runat="server">
         <p>
+            &nbsp;</p>
+        <p class="w3-center">
+            <asp:Label ID="Label1" runat="server" Font-Bold="True" Font-Size="X-Large" ForeColor="Red" Text="CURRENT STATUS"></asp:Label>
             <br />
         </p>
         <p>

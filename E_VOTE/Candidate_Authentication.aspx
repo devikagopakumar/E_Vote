@@ -72,7 +72,9 @@
         </tr>
         <tr>
             <td class="auto-style5">&nbsp;</td>
-            <td>&nbsp;</td>
+            <td>
+                <asp:HyperLink ID="HyperLink1" runat="server" Font-Underline="True" ForeColor="#9933FF" NavigateUrl="~/Forgot_Password_Candidate.aspx">Forgot Password ?</asp:HyperLink>
+            </td>
         </tr>
         <tr>
             <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

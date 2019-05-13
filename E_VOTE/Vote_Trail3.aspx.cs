@@ -27,13 +27,18 @@ public partial class Vote_Trail3 : System.Web.UI.Page
 
     protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
     {
-        int count = 1;
+        //int count = 1;
         string category = "Chairperson";
-        string label = "2K19";
+       // string label = "2K19";
         string eid = GridView1.SelectedRow.Cells[2].Text;
-        string s = "insert into Voting_Details (s_id,count,category,election_id,election_label,date_time) values ('" + sid.Text + "','" + count + "','" + category + "','" + eid + "','" + label + "','" + date_and_time.Text + "')";
-        db.insert(s);
-        Response.Write("<script> alert('Voted') </script>");
-        GridView1.Enabled = false;
+       /* string s = "insert into Voting_Details (s_id,count,category,election_id,election_label,date_time) values ('" + sid.Text + "','" + count + "','" + category + "','" + eid + "','" + label + "','" + date_and_time.Text + "')";
+        db.insert(s);*/
+        string s12 = "update Vote_Entry set chairperson = '" + 1 + "' where s_id='" + sid.Text + "'";
+        db.update(s12);
+        Session["stud_id"] = sid.Text;
+        Session["elect_id"] = eid;
+        Session["cat"] = category;
+        Response.Redirect("Vote_Testing.aspx");
+        // GridView1.Enabled = false;
     }
 }

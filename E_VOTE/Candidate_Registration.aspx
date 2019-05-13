@@ -85,7 +85,8 @@
                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                    &nbsp;&nbsp; &nbsp;</td>
                <td class="auto-style16">
-                   &nbsp;</td>
+                   <asp:TextBox ID="eligible" runat="server"></asp:TextBox>
+               </td>
            </tr>
            <tr>
                <td class="auto-style3" style="width: 1px; padding: 0 0 0 138px;">
@@ -162,7 +163,7 @@
                </td>
            </tr>
            <tr>
-               <td class="auto-style11" style="width: 1px; padding: 0 0 0 138px;">
+               <td class="auto-style21" style="padding: 0 0 0 138px;">
                    <asp:Label ID="Label18" runat="server" Text="Date,Time:"></asp:Label>
                </td>
                <td class="auto-style16">
@@ -178,7 +179,11 @@
                        <asp:ListItem></asp:ListItem>
                        <asp:ListItem>Chairman</asp:ListItem>
                        <asp:ListItem>Chairperson</asp:ListItem>
-                       <asp:ListItem>Art&#39;s Secretrary</asp:ListItem>
+                       <asp:ListItem>Vice Chairman</asp:ListItem>
+                       <asp:ListItem>Vice Chairperson</asp:ListItem>
+                       <asp:ListItem>Arts Secretary</asp:ListItem>
+                       <asp:ListItem>Sports Secretary</asp:ListItem>
+                       <asp:ListItem>Magazine Editor</asp:ListItem>
                    </asp:DropDownList>
                </td>
            </tr>

@@ -26,9 +26,9 @@ public partial class Student_Details : System.Web.UI.Page
 
     protected void Next_Click(object sender, EventArgs e)
     {
-       /*  int count = 1;
+       
           int f = 0;
-          string s11 = "select s_id from Voting_Details where s_id='"+sid.Text+"'";
+          string s11 = "select s_id from Vote_Entry where s_id='"+sid.Text+"'";
           SqlDataReader dr;
           dr = db.select(s11);
           while(dr.Read())
@@ -41,15 +41,15 @@ public partial class Student_Details : System.Web.UI.Page
           dr.Close();
           if (f == 1)
           {
-              Response.Write("<script> alert('Existed') </script>");
-          }
+            Response.Redirect("Vote_Trail1.aspx");
+        }
           else
           {
-              string s = "insert into Voting_Details (s_id,count) values ('" + sid.Text + "','" + count + "')";
+              string s = "insert into Vote_Entry (s_id) values ('" + sid.Text + "')";
               db.insert(s);
-              Response.Redirect("Voting.aspx");
-          }*/
-       Response.Redirect("Vote_Trail1.aspx");
+            Response.Redirect("Vote_Trail1.aspx");
+        }
+      
     }
 
     protected void Back_Click(object sender, EventArgs e)

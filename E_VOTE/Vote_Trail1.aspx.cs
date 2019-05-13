@@ -31,14 +31,14 @@ public partial class Vote_Trail1 : System.Web.UI.Page
     protected void chairman_Click(object sender, EventArgs e)
     {
        
-        string category_name = "Chairman";
+        string c_chairman = "1";
         int f = 0;
-        string s11 = "select s_id,category from Voting_Details where s_id='" + sid.Text + "' and category ='Chairman'";
+        string s11 = "select s_id,chairman from Vote_Entry where s_id='" + sid.Text + "' and chairman ='" + c_chairman+"'";
         SqlDataReader dr;
         dr = db.select(s11);
         while (dr.Read())
         {
-            if (sid.Text == dr.GetValue(0).ToString() && category_name == dr.GetValue(1).ToString())
+            if (sid.Text == dr.GetValue(0).ToString() && c_chairman == dr.GetValue(1).ToString())
             {
                 f = 1; ;
             }
@@ -50,7 +50,6 @@ public partial class Vote_Trail1 : System.Web.UI.Page
         }
         else
         {
-           
             Response.Redirect("Vote_Trail2aspx.aspx");
         }
        
@@ -58,14 +57,14 @@ public partial class Vote_Trail1 : System.Web.UI.Page
 
     protected void chairperson_Click(object sender, EventArgs e)
     {
-        string category_name = "Chairperson";
+        string c_chairperson = "1";
         int f = 0;
-        string s11 = "select s_id,category from Voting_Details where s_id='" + sid.Text + "' and category ='Chairperson'";
+        string s11 = "select s_id,chairman from Vote_Entry where s_id='" + sid.Text + "' and chairperson ='" + c_chairperson + "'";
         SqlDataReader dr;
         dr = db.select(s11);
         while (dr.Read())
         {
-            if (sid.Text == dr.GetValue(0).ToString() && category_name == dr.GetValue(1).ToString())
+            if (sid.Text == dr.GetValue(0).ToString() && c_chairperson == dr.GetValue(1).ToString())
             {
                 f = 1; ;
             }
@@ -77,7 +76,6 @@ public partial class Vote_Trail1 : System.Web.UI.Page
         }
         else
         {
-
             Response.Redirect("Vote_Trail3.aspx");
         }
 

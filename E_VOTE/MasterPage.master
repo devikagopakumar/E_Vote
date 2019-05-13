@@ -158,12 +158,13 @@
   <button class="dropbtn" style="margin: 0 0 0 80px;">Result</button>
   <div class="dropdown-content">
   <a href="Default3.aspx">View Election Result</a>
-  <a href="#">View Election Report</a>
+  <a href="Report.aspx">View Election Report</a>
   </div>
 </div>
       <div class="dropdown">
   <button class="dropbtn" style="margin: 0 0 0 60px;">Feedback<i class="fa fa-envelope" style="font-size:25px; color:white; padding: 0 18px 0 0; margin: -13px 0 0 10px;"></i> </button>
   <div class="dropdown-content">
+      <a href="Feedback_Form.aspx">Feedback</a>
   </div>
 </div>
        <div class="dropdown">

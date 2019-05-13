@@ -9,27 +9,26 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <form id="form1" runat="server">
+       
         <p>
-            <br />
-        </p>
-        <p>
-            <asp:Label ID="Label1" runat="server" Text="V" style="font-family:Lucida Calligraphy; font-size:70px; margin: 0 0 0 124px;"></asp:Label>
+            <asp:Label ID="Label1" runat="server" Text="V" style="font-family:Lucida Calligraphy; font-size:70px;  margin: 0 0 0 394px;"></asp:Label>
                     <asp:Label ID="Label2" runat="server" Text="oting" style="font-family:Lucida Calligraphy; font-size:50px"></asp:Label>
                             &nbsp;&nbsp; <asp:Label ID="for1" runat="server" style="font-family:Lucida Calligraphy; font-size:50px">for</asp:Label>
                             &nbsp;<asp:Label ID="category1" runat="server"  style="font-family:Lucida Calligraphy; font-size:50px">Chairman</asp:Label>
-                            </p>
+            <br />
+            <asp:Label ID="Label3" runat="server" Font-Bold="True" Font-Size="X-Large" ForeColor="Red" Text="2K19" style="    margin: 0 0 0 633px;"></asp:Label>               
+             </p>
         <p class="auto-style1">
-                    <asp:Label ID="Label3" runat="server" Font-Bold="True" Font-Size="X-Large" ForeColor="Red" Text="2K19"></asp:Label>
+                    
                         </p>
-        <p>
-            &nbsp;</p>
         <p>
             <asp:Label ID="sid" runat="server" Text="Label"></asp:Label>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:TextBox ID="date_and_time" runat="server" Height="16px" Width="277px"></asp:TextBox>
+            <asp:TextBox ID="date_and_time" runat="server"  style="height: 26px; width: 176px; margin: 0 0 0 344px;"></asp:TextBox>
         </p>
         <p>
-            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#999999" BorderStyle="Solid" BorderWidth="1px" CellPadding="3" ForeColor="Black" GridLines="Vertical" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
+            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#999999" BorderStyle="Solid" BorderWidth="1px" CellPadding="3" ForeColor="Black" GridLines="Vertical" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" style="width:80%; height: 40%;
+    margin: 0 0 0 141px;">
                 <AlternatingRowStyle BackColor="#CCCCCC" />
                 <Columns>
                     <asp:BoundField DataField="name" HeaderText="Name" />
@@ -48,6 +47,7 @@
             </asp:GridView>
         </p>
         <p>
+            <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="OK" />
         </p>
         <p>
         </p>
