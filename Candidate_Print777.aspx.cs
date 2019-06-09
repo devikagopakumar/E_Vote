@@ -6,17 +6,18 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data;
 using System.Data.SqlClient;
-public partial class Candidate_Print : System.Web.UI.Page
+public partial class Candidate_Print777 : System.Web.UI.Page
 {
     Student db;
     SqlConnection con;
     protected void Page_Load(object sender, EventArgs e)
     {
-        eid.Text = Session["a"].ToString();
+        string user = Session["usr"].ToString();
+        string pasw = Session["psw"].ToString();
         db = new Student();
         con = new SqlConnection("Data Source=DESKTOP-MOG89QK; Initial Catalog=E_vote; Integrated Security=SSPI");
         con.Open();
-        string s11= "select s.name,s.address,s.gender,s.phno,s.email,s.course,s.branch,s.semester,c.s_id,c.date_time,c.category from Student_details s,Candidate_detail c where s.s_id=c.s_id and c.election_id='"+eid.Text+"'";
+        string s11 = "select s.name,s.address,s.gender,s.phno,s.email,s.course,s.branch,s.semester,c.s_id,c.date_time,c.category,c.image,c.election_id from Student_details s,Candidate_detail c where s.s_id=c.s_id and c.username='" + user + "' and c.password='"+pasw+"'";
         SqlDataReader dr;
         dr = db.select(s11);
         while (dr.Read())
@@ -30,10 +31,11 @@ public partial class Candidate_Print : System.Web.UI.Page
             course.Text = dr.GetValue(5).ToString();
             branch.Text = dr.GetValue(6).ToString();
             semester.Text = dr.GetValue(7).ToString();
-            sid.Text= dr.GetValue(8).ToString();
+            sid.Text = dr.GetValue(8).ToString();
             date_time.Text = dr.GetValue(9).ToString();
             category.Text = dr.GetValue(10).ToString();
-
+            Image1.ImageUrl = dr.GetValue(11).ToString();
+            eid.Text = dr.GetValue(12).ToString();
 
         }
 
