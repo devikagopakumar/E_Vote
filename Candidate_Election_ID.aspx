@@ -3,7 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
     <style type="text/css">
         .auto-style1 {
-            height: 40px;
+            height: 60px;
         }
         .auto-style2 {
             position: relative;
@@ -19,7 +19,7 @@
             height: 103px;
         }
         .auto-style5 {
-            height: 67px;
+            height: 118px;
         }
     </style>
 </asp:Content>

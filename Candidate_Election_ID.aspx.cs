@@ -28,11 +28,6 @@ public partial class _Default : System.Web.UI.Page
         dr.Close(); 
 
     }
-
-   
-
-   
-
     protected void Button1_Click(object sender, EventArgs e)
     {
         string ei;

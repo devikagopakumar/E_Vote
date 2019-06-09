@@ -6,9 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data;
 using System.Data.SqlClient;
-
-
-public partial class Candidate_Authentication : System.Web.UI.Page
+public partial class Candidate_Login_Page : System.Web.UI.Page
 {
     Student db;
     SqlConnection con;
@@ -17,22 +15,24 @@ public partial class Candidate_Authentication : System.Web.UI.Page
         db = new Student();
         con = new SqlConnection("Data Source=DESKTOP-MOG89QK; Initial Catalog=E_vote;Integrated Security=SSPI");
         con.Open();
-
     }
-
-    protected void Ok_Click(object sender, EventArgs e)
+    protected void Next_Click(object sender, EventArgs e)
     {
-        string s11 = "select username,password,s_id,election_label,category from Candidate_detail where status='Y'";
+       
+        string s11 = "select username,password from Candidate_detail ";
         SqlDataReader dr;
         dr = db.select(s11);
         while (dr.Read())
         {
             if (username.Text == dr.GetValue(0).ToString() && password.Text == dr.GetValue(1).ToString())
             {
-                Session["s_id"] = dr.GetString(2);
-                Session["election_label"] = dr.GetString(3);
-                Session["category"] = dr.GetString(4);
-                Response.Redirect("Candidate_Canclation.aspx");
+                Session["usr"] = dr.GetString(0);
+                Session["psw"] = dr.GetString(1);
+                
+                Response.Redirect("Candidate_Print777.aspx");
+              /*  usr = dr.GetValue(0).ToString();
+                psw = dr.GetValue(1).ToString();
+                Response.Redirect("Candidate_Print777.aspx");*/
             }
         }
         if (username.Text == "" || password.Text == "")
@@ -44,10 +44,11 @@ public partial class Candidate_Authentication : System.Web.UI.Page
             Response.Write("<script> alert('Incorrect Username Or Password...!!! Try Again')</script>");
         }
         dr.Close();
+
     }
 
-    protected void cancel_Click(object sender, EventArgs e)
+    protected void Back_Click(object sender, EventArgs e)
     {
-        Response.Redirect("Election_Home_Page.aspx");
+        Response.Redirect("For_Login.aspx");
     }
 }
