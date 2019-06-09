@@ -142,37 +142,42 @@
   <div class="dropdown-content">
   <a href="Candidate_Registration.aspx">Candidate Registration</a>
   <a href="Candidate_Authentication.aspx">Nomination Cancellation</a>
-  <a href="Election_Home_Page.aspx">Nomination List</a>
+  <a href="Nomination_List.aspx">Nomination List</a>
+  <a href="Current_Status.aspx">Nominee Status</a>
   </div>
 </div>
   <div class="dropdown">
   <button class="dropbtn" style="margin: 0 0 0 80px;">Voting</button>
   <div class="dropdown-content">
-  <a href="#">Student Authentication</a>
-  <a href="#">Student Voting</a>
+  <a href="Student_Authentication.aspx">Student Authentication</a>
+ 
   
   </div>
 </div>
   <div class="dropdown">
   <button class="dropbtn" style="margin: 0 0 0 80px;">Result</button>
   <div class="dropdown-content">
-  <a href="Default3.aspx">View Election Result</a>
-  <a href="#">View Election Report</a>
+  <a href="Result.aspx">View Election Result</a>
+       <a href="Current_Status_Chairman.aspx">Result Status</a>
+  <a href="Report.aspx">View Election Report</a>
   </div>
 </div>
       <div class="dropdown">
   <button class="dropbtn" style="margin: 0 0 0 60px;">Feedback<i class="fa fa-envelope" style="font-size:25px; color:white; padding: 0 18px 0 0; margin: -13px 0 0 10px;"></i> </button>
   <div class="dropdown-content">
+      <a href="Feedback_Form.aspx">Feedback</a>
   </div>
 </div>
        <div class="dropdown">
   <button class="dropbtn" style="margin: 0 0 0 60px;">Contact Us<i class="fa fa-phone" style="font-size:25px; color:white; padding: 0 18px 0 0; margin: -13px 0 0 10px;"></i></button>
   <div class="dropdown-content">
+        <a href="Contact_Us_Page.aspx">Contact Us</a>
   </div>
 </div> 
        <div class="dropdown">
   <button class="dropbtn" style="margin: 0 0 0 60px;"><i class="fa fa-user" style="font-size:35px; color:white; padding: 0 18px 0 0; margin: -13px 0 0 10px;"></i></button>
   <div class="dropdown-content">
+       <a href="For_Login.aspx">Create Login</a>
   </div>
 </div> 
 

@@ -20,6 +20,6 @@ public partial class Default3 : System.Web.UI.Page
 
     protected void Button2_Click(object sender, EventArgs e)
     {
-        Response.Redirect("Election_Home_Page.aspx");
+        Response.Redirect("Admin_Login_Page_New.aspx");
     }
 }

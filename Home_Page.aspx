@@ -186,16 +186,18 @@ body {
     </div>
   </div> 
   
-     <div class="dropdown">
+    <!-- <div class="dropdown">
     <button class="dropbtn" style="margin:0px 0 0 75px;">Login
       <i class="fa fa-caret-down"></i>
     </button>
     <div class="dropdown-content">
-      <a href="#">Link 1</a>
+      <a href="Admin_Login_Page.aspx">Link 1</a>
       <a href="#">Link 2</a>
       <a href="#">Link 3</a>
     </div>
-  </div>
+  </div>-->
+    <asp:Button ID="Button1" runat="server" OnClick="Button2_Click"  Text="Login" style="margin: 0 0 0 69px; height: 51px; background-color: #333; border:0px; color:white; font-size:16px;"/>
+   
     <asp:Button ID="Button2" runat="server" OnClick="Button2_Click"  Text="Election" style="margin: -1px 0 0 66px; height: 51px; background-color: #333; border:0px; color:white; font-size:16px;"/>
    
 </div>
